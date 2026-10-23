@@ -1,5 +1,7 @@
 # CutRoom Pro — landing page
 
+Site publicado: [cutroompro.vercel.app](https://cutroompro.vercel.app). O editor está em [Mathpcastro/cutroom](https://github.com/Mathpcastro/cutroom).
+
 Landing pública do [CutRoom](https://github.com/Mathpcastro/cutroom): editor de vídeo gratuito, open source e processado no computador. Este repositório contém somente o site, seus vídeos e imagens de demonstração, e a função que encaminha o formulário de download ao cadastro privado existente.
 
 ## Desenvolvimento
