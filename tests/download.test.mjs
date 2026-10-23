@@ -2,11 +2,11 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import handler from '../api/download.js';
 
-const release = 'https://github.com/Mathpcastro/cutroom/releases/download/v0.6.1';
+const release = 'https://github.com/Mathpcastro/cutroom/releases/download/v0.6.0';
 const installers = {
-  windows: `${release}/CutRoom.Setup.0.6.1.exe`,
-  'macos-arm64': `${release}/CutRoom-0.6.1-mac-arm64.dmg`,
-  'macos-x64': `${release}/CutRoom-0.6.1-mac-x64.dmg`,
+  windows: `${release}/CutRoom.Setup.0.6.0.exe`,
+  'macos-arm64': `${release}/CutRoom-0.6.0-mac-arm64.dmg`,
+  'macos-x64': `${release}/CutRoom-0.6.0-mac-x64.dmg`,
 };
 
 function request(body, overrides = {}) {

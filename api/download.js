@@ -1,9 +1,9 @@
 const PRIVATE_BACKEND = "https://cutroom-editor.abloombat.chatgpt.site/api/download";
 const MAX_BODY_BYTES = 4096;
 const DOWNLOAD_URLS = {
-  windows: "https://github.com/Mathpcastro/cutroom/releases/download/v0.6.1/CutRoom.Setup.0.6.1.exe",
-  "macos-arm64": "https://github.com/Mathpcastro/cutroom/releases/download/v0.6.1/CutRoom-0.6.1-mac-arm64.dmg",
-  "macos-x64": "https://github.com/Mathpcastro/cutroom/releases/download/v0.6.1/CutRoom-0.6.1-mac-x64.dmg",
+  windows: "https://github.com/Mathpcastro/cutroom/releases/download/v0.6.0/CutRoom.Setup.0.6.0.exe",
+  "macos-arm64": "https://github.com/Mathpcastro/cutroom/releases/download/v0.6.0/CutRoom-0.6.0-mac-arm64.dmg",
+  "macos-x64": "https://github.com/Mathpcastro/cutroom/releases/download/v0.6.0/CutRoom-0.6.0-mac-x64.dmg",
 };
 
 function fail(response, status, error) {

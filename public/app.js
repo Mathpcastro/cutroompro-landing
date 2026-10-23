@@ -17,7 +17,7 @@ comandos:{index:'02 / 38 COMANDOS',title:'Um + abre possibilidades.',description
 legendas:{index:'03 / 24 ESTILOS',title:'Sua voz ganha presença.',description:'Karaokê, frases, destaque por palavra e estilos personalizados. Ajuste a aparência, veja no player e salve sua identidade para os próximos projetos.',points:['24 presets, seis famílias de fontes','Cores, posição e animações editáveis','Transcrição local com tempos por palavra'],video:'demo-captions.mp4',poster:'captions.webp',alt:'Estúdio de legendas com prévia real no vídeo',link:'Veja o estúdio de legendas',url:'https://github.com/Mathpcastro/cutroom/blob/main/docs/captions.md'},
 efeitos:{index:'04 / EFEITOS',title:'Dê movimento à explicação.',description:'Títulos e destaques sobre sua gravação. Diagramas e etapas em tela cheia. Use um modelo pronto ou peça uma cena original à sua IA com /animar.',points:['Sua voz continua durante a animação','Prévia sincronizada com a timeline','Exportação local com o pacote de efeitos'],video:'demo-effects.mp4',poster:'effects.webp',alt:'Efeitos e animações em uma timeline real do CutRoom',link:'Conheça os efeitos',url:'https://github.com/Mathpcastro/cutroom/blob/main/docs/motion.md'},
 timeline:{index:'05 / TIMELINE',title:'A edição continua nas suas mãos.',description:'Confira cada corte, divida um clipe, ajuste zoom, foco, velocidade e áudio. O chat e os controles manuais trabalham no mesmo projeto.',points:['Desfazer e refazer alterações','Salvar e reabrir seu projeto','Exportar em MP4 H.264/AAC'],video:'demo-timeline.mp4',poster:'timeline.webp',alt:'Timeline do CutRoom com cortes, áudio e efeitos',link:'Veja como começar',url:'#como-comecar'},
-temas:{index:'06 / SEIS TEMAS',title:'Seu espaço para criar.',description:'Grafite, Claro, Dark+, Light+, Nord e Tokyo Night. Uma interface discreta, com menus compactos e painéis que aparecem quando você precisa.',points:['Tema salvo entre sessões','Escolha um visual claro ou escuro','Foco no vídeo e na conversa'],image:'app-dark.webp',alt:'CutRoom no tema Grafite',link:'Baixar e escolher meu tema',url:'https://github.com/Mathpcastro/cutroom/releases/download/v0.6.1/CutRoom.Setup.0.6.1.exe'}
+temas:{index:'06 / SEIS TEMAS',title:'Seu espaço para criar.',description:'Grafite, Claro, Dark+, Light+, Nord e Tokyo Night. Uma interface discreta, com menus compactos e painéis que aparecem quando você precisa.',points:['Tema salvo entre sessões','Escolha um visual claro ou escuro','Foco no vídeo e na conversa'],image:'app-dark.webp',alt:'CutRoom no tema Grafite',link:'Baixar e escolher meu tema',url:'https://github.com/Mathpcastro/cutroom/releases/download/v0.6.0/CutRoom.Setup.0.6.0.exe'}
 };
 const explorerVideo=$('#explorer-video'),explorerImage=$('#explorer-image'),explorerPanel=$('#explorer-panel');let activeFeature='overview',featureVisible=false;
 function setFeature(id,{focus=false}={}) {
@@ -101,9 +101,9 @@ const downloadModal=$('#download-dialog'),downloadForm=$('#download-form'),downl
 const downloadInputs={name:$('#download-name'),whatsapp:$('#download-whatsapp'),email:$('#download-email')};
 const downloadPlatform=$('#download-platform');
 const officialInstallers={
-  windows:'https://github.com/Mathpcastro/cutroom/releases/download/v0.6.1/CutRoom.Setup.0.6.1.exe',
-  'macos-arm64':'https://github.com/Mathpcastro/cutroom/releases/download/v0.6.1/CutRoom-0.6.1-mac-arm64.dmg',
-  'macos-x64':'https://github.com/Mathpcastro/cutroom/releases/download/v0.6.1/CutRoom-0.6.1-mac-x64.dmg'
+  windows:'https://github.com/Mathpcastro/cutroom/releases/download/v0.6.0/CutRoom.Setup.0.6.0.exe',
+  'macos-arm64':'https://github.com/Mathpcastro/cutroom/releases/download/v0.6.0/CutRoom-0.6.0-mac-arm64.dmg',
+  'macos-x64':'https://github.com/Mathpcastro/cutroom/releases/download/v0.6.0/CutRoom-0.6.0-mac-x64.dmg'
 };
 let downloadReturnFocus=null,downloadBusy=false,downloadController=null,downloadRequestEpoch=0;
 function clearDownloadErrors(){
@@ -168,7 +168,7 @@ downloadForm.addEventListener('submit',async event=>{
     const platform=downloadPlatform.value;
     if(typeof data.downloadUrl!=='string'||data.downloadUrl!==officialInstallers[platform])throw new Error('Invalid download destination');
     const labels={windows:'Windows x64','macos-arm64':'macOS · Apple Silicon','macos-x64':'macOS · Intel'};
-    downloadReady.href=data.downloadUrl;$('#download-ready-meta').textContent='CutRoom 0.6.1 · '+labels[platform];
+    downloadReady.href=data.downloadUrl;$('#download-ready-meta').textContent='CutRoom 0.6.0 · '+labels[platform];
     $('#download-macos-note').hidden=platform==='windows';downloadForm.reset();downloadPlatform.value='';downloadForm.hidden=true;downloadSuccess.hidden=false;
     downloadReady.focus();downloadReady.click();
   }catch(error){
